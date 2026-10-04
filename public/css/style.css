@@ -1,0 +1,226 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #f5f5f5;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover { text-decoration: underline; }
+
+header { padding: 65px 0 35px; }
+header span { color: #777; font-size: 12px; }
+h1 { font-size: 42px; margin: 12px 0; }
+header p { color: #666; }
+
+.table-wrap {
+    overflow-x: auto;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    nav { align-items: flex-start; flex-direction: column; }
+    nav a { margin: 0 20px 0 0; }
+    h1 { font-size: 32px; }
+}
+/* TFA3 customer and user forms */
+
+.page {
+    width: min(100% - 32px, 1000px);
+    margin: 48px auto;
+}
+
+.back-link {
+    color: #252525;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.form-card {
+    max-width: 650px;
+    margin-top: 22px;
+    padding: clamp(24px, 5vw, 44px);
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgb(0 0 0 / 5%);
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #707070;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.form-card h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 38px);
+}
+
+.intro {
+    margin: 8px 0 28px;
+    color: #707070;
+}
+
+.field {
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.field input {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 9px;
+    background: #fff;
+    color: #252525;
+    font: inherit;
+    transition: border-color 150ms, box-shadow 150ms;
+}
+
+.field input:hover {
+    border-color: #949494;
+}
+
+.field input:focus-visible {
+    outline: none;
+    border-color: #252525;
+    box-shadow: 0 0 0 3px rgb(37 37 37 / 12%);
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 1px solid #252525;
+    border-radius: 9px;
+    background: #252525;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 150ms, background 150ms, box-shadow 150ms;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: #444;
+    color: #fff;
+    box-shadow: 0 6px 14px rgb(0 0 0 / 12%);
+}
+
+.button-secondary {
+    background: #fff;
+    color: #252525;
+}
+
+.button-secondary:hover {
+    background: #ededed;
+    color: #252525;
+}
+
+.button:focus-visible,
+.back-link:focus-visible {
+    outline: 3px solid #888;
+    outline-offset: 3px;
+}
+
+.errors {
+    margin-top: 7px;
+    color: #a32929;
+    font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+.row-link {
+    color: #252525;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.row-link:hover {
+    text-decoration: underline;
+}
+
+.row-link:focus-visible {
+    outline: 3px solid #888;
+    outline-offset: 3px;
+}
+
+.notice-success {
+    padding: 12px 14px;
+    margin: 0 0 18px;
+    border: 1px solid #d9d9d9;
+    border-radius: 9px;
+    background: #ededed;
+}
+.avatar {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e7e7e7;
+}
